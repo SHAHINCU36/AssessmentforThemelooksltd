@@ -88,7 +88,7 @@ delete_form.submit();
 <script type="text/javascript">
     $(function() {
         $('#productTable').DataTable({
-            pageLength: 10,
+            pageLength: 5,
             //"ajax": './assets/demo/data/table_data.json',
             /*"columns": [
 

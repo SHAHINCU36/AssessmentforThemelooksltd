@@ -5,7 +5,7 @@
                 <img src="{{asset('assets/img/admin-avatar.png')}}" width="45px" />
             </div>
             <div class="admin-info">
-                <div class="font-strong">James Brown</div><small>Administrator</small></div>
+                <div class="font-strong">{{Auth::user()->name}}</div><small>{{Auth::user()->user_type==1?'Admin':'user'}}</small></div>
         </div>
         <ul class="side-menu metismenu">
             <li>
@@ -14,6 +14,7 @@
                 </a>
             </li>
             <li class="heading">FEATURES</li>
+            @if(Auth::user()->user_type==1)
             <li>
                 <a href="javascript:;"><i class="sidebar-item-icon fa fa-bookmark"></i>
                     <span class="nav-label">User Panel </span><i class="fa fa-angle-left arrow"></i></a>
@@ -27,6 +28,7 @@
 
                 </ul>
             </li>
+            @endif
             <li>
                 <a href="javascript:;"><i class="sidebar-item-icon fa fa-edit"></i>
                     <span class="nav-label">Forms</span><i class="fa fa-angle-left arrow"></i></a>

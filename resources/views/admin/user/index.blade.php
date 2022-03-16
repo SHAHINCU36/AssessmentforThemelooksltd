@@ -1,3 +1,4 @@
+@if(Auth::user()->user_type==1)
 @extends('admin.layouts.master')
 @section('content')
 
@@ -57,6 +58,7 @@
         @method('delete')
     </form>
 @endsection
+@endif
 
 @section('script')
     <script>
